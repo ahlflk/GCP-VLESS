@@ -1,4 +1,7 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 8080,
@@ -6,18 +9,20 @@
       "settings": {
         "clients": [
           {
-            "id": "3675119c-14fc-46a4-b5f3-9a2c91a7d802",
-            "level": 0
+            "id": "PLACEHOLDER_UUID"
           }
         ],
         "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
-        "security": "none",
         "wsSettings": {
           "path": "/vless"
         }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
       }
     }
   ],
