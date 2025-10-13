@@ -1,4 +1,4 @@
-# ⚡ VLESS over WebSocket (WS) on Google Cloud Run + CDN
+## ⚡ VLESS over WebSocket (WS) on Google Cloud Run + CDN
 
 This project allows you to deploy a **VLESS proxy** server over **WebSocket** using **Xray-core**, fully containerized with Docker and deployed to **Google Cloud Run**, fronted by **Google Cloud CDN**.
 
@@ -158,9 +158,9 @@ Made with ❤️ by [AHLFLK2025channel](https://t.me/AHLFLK2025channel)
 
 ---
 
-# 🚀 Cloud Run One-Click GCP-VLESS
+## 🚀 Cloud Run One-Click GCP-VLESS
 
 Run this script directly in **Google Cloud Shell**:
 
 ```bash
-bash <(curl -Ls https://raw.githubusercontent.com/ahlflk/GCP-VLESS/refs/heads/main/gcp-vless-sh)
+bash <(curl -Ls https://raw.githubusercontent.com/ahlflk/GCP-VLESS/refs/heads/main/gcp-vless.sh)
