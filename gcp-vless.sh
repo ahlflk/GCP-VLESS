@@ -37,7 +37,7 @@ log() {
 }
 
 warn() {
-    echo -e "${YELLOW}⚠️  [WARNING]${NC} ${WHITE}$1${NC}"
+    echo -e "${YELLOW}⚠️ [WARNING]${NC} ${WHITE}$1${NC}"
 }
 
 error() {
@@ -678,11 +678,10 @@ EOF
     log "Created cloudbuild.yaml for clean, quiet build logs"
     
     log "Building container image (quiet mode)..."
-    progress_bar 10
-    if ! gcloud builds submit --config cloudbuild.yaml --quiet; then
-        error "Build failed"
-        exit 1
-    fi
+progress_bar 10
+if ! gcloud builds submit --config cloudbuild.yaml --quiet > /dev/null 2>&1; then
+    error "Build failed. Check Dockerfile for issues with geo files download."
+fi
     
     log "Deploying to Cloud Run..."
     progress_bar 8
